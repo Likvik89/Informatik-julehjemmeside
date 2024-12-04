@@ -1,6 +1,10 @@
 window.onload = function() {
 	var canvas = document.getElementById("mycanvas");
 	var context = canvas.getContext("2d");
+	var canvas2 = document.getElementById("")
+
+	var scene = 1;
+
 	var julekane = new Image();
 	julekane.src = "Billeder/Julemandens kane.png";
 	var xpos = -100;
@@ -9,7 +13,6 @@ window.onload = function() {
 	sne.src = "Billeder/Snowflakes.png";
 	var ypos1 = -85;
 	var ypos2 = -170;
-
 
 	function draw(context) {
 		context.drawImage(julekane,xpos, 0);

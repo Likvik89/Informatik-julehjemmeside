@@ -1,6 +1,7 @@
 #wrapper {
     background-color: #014034;
     width: 1020px;
+    height: 780px;
     margin-right: auto;
     margin-left: auto;
     margin-top: auto;
@@ -79,9 +80,17 @@ p {
     float: right;
     margin: 5px;
     width: 780px;
-    border-radius: 10px;
     border-color: black;
 }
 #mycanvas {
     border-radius: 10px;
+}
+#contenttext {
+    margin: 5px;
+}
+#contentcanvas {
+    float: right;
+    background-color: #D94854;
+    margin: 5px;
+    border-radius: 5px;
 }
