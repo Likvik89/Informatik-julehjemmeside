@@ -1,0 +1,87 @@
+#wrapper {
+    background-color: #014034;
+    width: 1020px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 1px;
+}
+#HV {
+    height: 1px;
+}
+header {
+    width: 900px;
+    height: 100px;
+    background-color: #D94A4A;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    float: inline-start;
+    float: right;
+    margin: 5px;
+}
+aside {
+    background-color: #41A664;
+    width: 200px;
+    height: 600px;
+    margin: 5px;
+    float: left;
+    border-radius: 10px;
+}
+#content {
+    background-color: #F2D194;
+    width: 800px;
+    height: 600px;
+    margin: 5px;
+    float: right;
+    border-radius: 10px;
+}
+footer {
+    background-color: #D94854;
+    width: 1010px;
+    height: 50px;
+    margin: 5px;
+    float: left;
+    border-radius: 10px;
+}
+#logo {
+    float: left;
+    float: inline-start;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+}
+#Logo {
+    border-radius: 10px;
+}
+h1 {
+    margin: 5px;
+}
+a {
+    margin: 5px;
+}
+p {
+    margin: 5px;
+}
+
+#julemanden {
+    float: right;
+    margin: 5px;
+}
+#headertext {
+    float: left;
+    margin: 5px;
+    width: 100px;
+}
+
+#headercanvas {
+    float: right;
+    margin: 5px;
+    width: 780px;
+    border-radius: 10px;
+    border-color: black;
+}
+#mycanvas {
+    border-radius: 10px;
+}
