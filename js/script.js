@@ -1,9 +1,6 @@
 window.onload = function() {
 	var canvas = document.getElementById("mycanvas");
 	var context = canvas.getContext("2d");
-	var canvas2 = document.getElementById("")
-
-	var scene = 1;
 
 	var julekane = new Image();
 	julekane.src = "Billeder/Julemandens kane.png";
@@ -47,9 +44,41 @@ window.onload = function() {
 			}
 	}
 	animate();
+	animation();
+}
 
+function animation(){
+	var canvas = document.getElementById("contentcanvas");
+	var context = canvas.getContext("2d");
 
+	var time = 0;
+	var scene = 1;
 
+	var skier = new Image();
+	skier.src = "Billeder/skier.png";
+	xpos = -125;
+	ypos = -125;
+
+	var slope = new Image();
+	slope.src = "Billeder/Skislope.png";
+
+	function draw(context) {
+		context.beginPath();
+		context.moveTo(251, 301);  // Right angle point (top left)
+		context.lineTo(-1, 301);  // First cathetus (horizontal line)
+		context.lineTo(-1, 51);  // Second cathetus (vertical line)
+		context.closePath();
+		context.fillStyle = 'white'; // Set the fill color to white
+		context.fill(); // Fill the triangle
+		context.stroke(); // Optional: add a stroke outline
+		}
+
+	function animate() {
+		time++;
+		draw(context);
+	}
+
+	animate();
 }
 
 function test() {
