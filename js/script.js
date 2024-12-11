@@ -56,11 +56,8 @@ function animation(){
 
 	var skier = new Image();
 	skier.src = "Billeder/skier.png";
-	xpos = -125;
-	ypos = -125;
-
-	var slope = new Image();
-	slope.src = "Billeder/Skislope.png";
+	xpos = -75;
+	ypos = -55;
 
 	function draw(context) {
 		context.beginPath();
@@ -71,11 +68,17 @@ function animation(){
 		context.fillStyle = 'white'; // Set the fill color to white
 		context.fill(); // Fill the triangle
 		context.stroke(); // Optional: add a stroke outline
+		context.drawImage(skier, xpos, ypos);
+		context.restore();
 		}
 
 	function animate() {
 		time++;
+		xpos++;
+		ypos++;
+		context.clearRect(0,0,300,300);
 		draw(context);
+		setTimeout(animate,10);
 	}
 
 	animate();
