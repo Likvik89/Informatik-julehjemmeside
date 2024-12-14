@@ -71,6 +71,9 @@ function animation(){
 	var top = new Image();
 	top.src = "Billeder/pinetreetop.png";
 
+	var impact = new Image();
+	impact.src = "Billeder/cartoon impact.png";
+
 	function draw(context) {
 		switch (scene) {
 			case 1:
@@ -86,6 +89,8 @@ function animation(){
 				context.stroke(); // Optional: add a stroke outline
 				context.drawImage(skier, xpos, ypos);
 				if (ypos > 375) {
+					xpos = -75;
+					ypos = -55;
 					scene = 2;
 				}
 				context.restore();
@@ -110,19 +115,40 @@ function animation(){
 				context.stroke(); // Optional: add a stroke outline
 				context.drawImage(skier, xpos, ypos);
 				context.drawImage(top, 105, 90);
-				if (ypos > 375) {
-					xpos = -75;
-					ypos = -55;
+				if (ypos > 125) {
+					scene = 3;
 				}
 				context.restore();
-
 				break
+			case 3:
+				time++;
+				context.drawImage(background_tree, 25, 25);
+				context.drawImage(background_tree, -25, -10);
+				context.drawImage(background_tree, 80, 60);
+				context.drawImage(background_tree, 150, 170);
+				context.drawImage(background_tree, 200, 200);
+				context.drawImage(trunk, 110, 130);
+				context.beginPath();
+				context.moveTo(251, 301);  // Right angle point (top left)
+				context.lineTo(-1, 301);  // First cathetus (horizontal line)
+				context.lineTo(-1, 51);  // Second cathetus (vertical line)
+				context.closePath();
+				context.fillStyle = 'white'; // Set the fill color to white
+				context.fill(); // Fill the triangle
+				context.stroke(); // Optional: add a stroke outline
+				context.drawImage(top, 105, 90);
+				context.drawImage(impact, 85, 90);
+				if (time >= 180) {
+					xpos = -75;
+					ypos = -55;
+					scene = 1;
+					time = 0;
+				}
 			}
 
 		}
 
 	function animate() {
-		time++;
 		context.clearRect(0,0,300,300);
 		draw(context);
 		setTimeout(animate,1);
