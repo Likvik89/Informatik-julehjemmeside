@@ -60,22 +60,34 @@ function animation(){
 	ypos = -55;
 
 	function draw(context) {
-		context.beginPath();
-		context.moveTo(251, 301);  // Right angle point (top left)
-		context.lineTo(-1, 301);  // First cathetus (horizontal line)
-		context.lineTo(-1, 51);  // Second cathetus (vertical line)
-		context.closePath();
-		context.fillStyle = 'white'; // Set the fill color to white
-		context.fill(); // Fill the triangle
-		context.stroke(); // Optional: add a stroke outline
-		context.drawImage(skier, xpos, ypos);
-		context.restore();
+		switch (scene) {
+			case 1:
+				xpos++;
+				ypos++;
+				context.beginPath();
+				context.moveTo(251, 301);  // Right angle point (top left)
+				context.lineTo(-1, 301);  // First cathetus (horizontal line)
+				context.lineTo(-1, 51);  // Second cathetus (vertical line)
+				context.closePath();
+				context.fillStyle = 'white'; // Set the fill color to white
+				context.fill(); // Fill the triangle
+				context.stroke(); // Optional: add a stroke outline
+				context.drawImage(skier, xpos, ypos);
+				if (ypos > 375) {
+					scene = 2
+					xpos = -75;
+					ypos = -55;
+				}
+				context.restore();
+				break
+			case 2:
+				alert("2")
+			}
+
 		}
 
 	function animate() {
 		time++;
-		xpos++;
-		ypos++;
 		context.clearRect(0,0,300,300);
 		draw(context);
 		setTimeout(animate,10);
