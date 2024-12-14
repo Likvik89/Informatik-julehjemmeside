@@ -59,6 +59,12 @@ function animation(){
 	xpos = -75;
 	ypos = -55;
 
+	var tree = new Image();
+	tree.src = "Billeder/pinetree.png";
+
+	var background_tree = new Image();
+	background_tree.src = "Billeder/backgroundpinetree.png"
+
 	function draw(context) {
 		switch (scene) {
 			case 1:
@@ -74,14 +80,35 @@ function animation(){
 				context.stroke(); // Optional: add a stroke outline
 				context.drawImage(skier, xpos, ypos);
 				if (ypos > 375) {
-					scene = 2
+					scene = 2;
+				}
+				context.restore();
+				break
+
+			case 2:
+				xpos++;
+				ypos++;
+				context.drawImage(background_tree, 25, 25);
+				context.drawImage(background_tree, -25, -10);
+				context.drawImage(background_tree, 80, 60);
+				context.drawImage(background_tree, 150, 170);
+				context.drawImage(background_tree, 200, 200);
+				context.beginPath();
+				context.moveTo(251, 301);  // Right angle point (top left)
+				context.lineTo(-1, 301);  // First cathetus (horizontal line)
+				context.lineTo(-1, 51);  // Second cathetus (vertical line)
+				context.closePath();
+				context.fillStyle = 'white'; // Set the fill color to white
+				context.fill(); // Fill the triangle
+				context.stroke(); // Optional: add a stroke outline
+				context.drawImage(skier, xpos, ypos);
+				if (ypos > 375) {
 					xpos = -75;
 					ypos = -55;
 				}
 				context.restore();
+
 				break
-			case 2:
-				alert("2")
 			}
 
 		}
@@ -90,7 +117,7 @@ function animation(){
 		time++;
 		context.clearRect(0,0,300,300);
 		draw(context);
-		setTimeout(animate,10);
+		setTimeout(animate,1);
 	}
 
 	animate();
