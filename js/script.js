@@ -45,7 +45,6 @@ window.onload = function() {
 	}
 	animate();
 	animation();
-	animate_snow();
 }
 
 function animation(){
@@ -81,11 +80,11 @@ function animation(){
 				xpos++;
 				ypos++;
 				context.beginPath();
-				context.moveTo(250, 100); // Peak of the mountain
-				context.lineTo(50, 301);  // Left base corner of the mountain
-				context.lineTo(450, 301); // Right base corner of the mountain
+				context.moveTo(250, 100);
+				context.lineTo(50, 301);
+				context.lineTo(450, 301);
 				context.closePath();
-				context.fillStyle = '#BFBFBF'; // A greyish color for the mountain
+				context.fillStyle = '#BFBFBF';
 				context.fill();
 				context.stroke();
 
@@ -113,9 +112,9 @@ function animation(){
 				xpos++;
 				ypos++;
 				context.beginPath();
-				context.moveTo(220, 70); // Peak of the mountain
-				context.lineTo(20, 301);  // Left base corner of the mountain
-				context.lineTo(420, 301); // Right base corner of the mountain
+				context.moveTo(220, 70);
+				context.lineTo(20, 301);
+				context.lineTo(420, 301);
 				context.closePath();
 				context.fillStyle = '#BFBFBF'; // A greyish color for the mountain
 				context.fill();
