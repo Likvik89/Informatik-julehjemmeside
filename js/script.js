@@ -79,14 +79,15 @@ function animation(){
 			case 1:
 				xpos++;
 				ypos++;
+				context.drawImage(background_tree, 220, 180);
 				context.beginPath();
-				context.moveTo(251, 301);  // Right angle point (top left)
-				context.lineTo(-1, 301);  // First cathetus (horizontal line)
-				context.lineTo(-1, 51);  // Second cathetus (vertical line)
+				context.moveTo(251, 301);
+				context.lineTo(-1, 301);
+				context.lineTo(-1, 51);
 				context.closePath();
-				context.fillStyle = 'white'; // Set the fill color to white
-				context.fill(); // Fill the triangle
-				context.stroke(); // Optional: add a stroke outline
+				context.fillStyle = 'white';
+				context.fill();
+				context.stroke();
 				context.drawImage(skier, xpos, ypos);
 				if (ypos > 375) {
 					xpos = -75;
@@ -106,13 +107,13 @@ function animation(){
 				context.drawImage(background_tree, 200, 200);
 				context.drawImage(trunk, 110, 130);
 				context.beginPath();
-				context.moveTo(251, 301);  // Right angle point (top left)
-				context.lineTo(-1, 301);  // First cathetus (horizontal line)
-				context.lineTo(-1, 51);  // Second cathetus (vertical line)
+				context.moveTo(251, 301);
+				context.lineTo(-1, 301);
+				context.lineTo(-1, 51);
 				context.closePath();
-				context.fillStyle = 'white'; // Set the fill color to white
-				context.fill(); // Fill the triangle
-				context.stroke(); // Optional: add a stroke outline
+				context.fillStyle = 'white';
+				context.fill();
+				context.stroke();
 				context.drawImage(skier, xpos, ypos);
 				context.drawImage(top, 105, 90);
 				if (ypos > 125) {
@@ -129,13 +130,13 @@ function animation(){
 				context.drawImage(background_tree, 200, 200);
 				context.drawImage(trunk, 110, 130);
 				context.beginPath();
-				context.moveTo(251, 301);  // Right angle point (top left)
-				context.lineTo(-1, 301);  // First cathetus (horizontal line)
-				context.lineTo(-1, 51);  // Second cathetus (vertical line)
+				context.moveTo(251, 301);
+				context.lineTo(-1, 301);
+				context.lineTo(-1, 51);
 				context.closePath();
-				context.fillStyle = 'white'; // Set the fill color to white
-				context.fill(); // Fill the triangle
-				context.stroke(); // Optional: add a stroke outline
+				context.fillStyle = 'white';
+				context.fill();
+				context.stroke();
 				context.drawImage(top, 105, 90);
 				context.drawImage(impact, 85, 90);
 				if (time >= 180) {
@@ -155,21 +156,4 @@ function animation(){
 	}
 
 	animate();
-}
-
-function test() {
-    alert("Test");
-}
-
-function cirkel() {
-	var c = document.getElementById("mycanvas");
-	var ctx = c.getContext("2d");
-	ctx.beginPath();
-	ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-	ctx.stroke();
-}
-
-function slet() {
-	var canvas = document.getElementById("mycanvas");
-	var context = canvas.getContext("2d");
 }
