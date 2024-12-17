@@ -79,7 +79,17 @@ function animation(){
 			case 1:
 				xpos++;
 				ypos++;
+				context.beginPath();
+				context.moveTo(250, 100); // Peak of the mountain
+				context.lineTo(50, 301);  // Left base corner of the mountain
+				context.lineTo(450, 301); // Right base corner of the mountain
+				context.closePath();
+				context.fillStyle = '#BFBFBF'; // A greyish color for the mountain
+				context.fill();
+				context.stroke();
+
 				context.drawImage(background_tree, 220, 180);
+
 				context.beginPath();
 				context.moveTo(251, 301);
 				context.lineTo(-1, 301);
@@ -100,6 +110,14 @@ function animation(){
 			case 2:
 				xpos++;
 				ypos++;
+				context.beginPath();
+				context.moveTo(220, 70); // Peak of the mountain
+				context.lineTo(20, 301);  // Left base corner of the mountain
+				context.lineTo(420, 301); // Right base corner of the mountain
+				context.closePath();
+				context.fillStyle = '#BFBFBF'; // A greyish color for the mountain
+				context.fill();
+				context.stroke();
 				context.drawImage(background_tree, 25, 25);
 				context.drawImage(background_tree, -25, -10);
 				context.drawImage(background_tree, 80, 60);
@@ -123,6 +141,14 @@ function animation(){
 				break
 			case 3:
 				time++;
+				context.beginPath();
+				context.moveTo(220, 70); // Peak of the mountain
+				context.lineTo(20, 301);  // Left base corner of the mountain
+				context.lineTo(420, 301); // Right base corner of the mountain
+				context.closePath();
+				context.fillStyle = '#BFBFBF'; // A greyish color for the mountain
+				context.fill();
+				context.stroke();
 				context.drawImage(background_tree, 25, 25);
 				context.drawImage(background_tree, -25, -10);
 				context.drawImage(background_tree, 80, 60);
